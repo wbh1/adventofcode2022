@@ -2,6 +2,7 @@ package solutions
 
 import (
 	"fmt"
+	"sort"
 	"strconv"
 )
 
@@ -53,26 +54,10 @@ func (d *DayOne) PartOne() string {
 }
 
 func (d *DayOne) PartTwo() string {
-	// 203731 too low
-	top3 := [3]Elf{}
-	for _, elf := range elves {
-		switch cals := elf.TotalCalories; {
-		case cals > top3[0].TotalCalories:
-			top3[2] = top3[1]
-			top3[1] = top3[0]
-			top3[0] = elf
-		case cals > top3[1].TotalCalories:
-			top3[2] = top3[1]
-			top3[1] = elf
-		case cals > top3[2].TotalCalories:
-			top3[2] = elf
-		}
+	sortElves := func(i, j int) bool {
+		return elves[i].TotalCalories > elves[j].TotalCalories
 	}
+	sort.Slice(elves, sortElves)
 
-	total_cals := 0
-	for _, elf := range top3 {
-		total_cals += elf.TotalCalories
-	}
-
-	return fmt.Sprintf("%d", total_cals)
+	return fmt.Sprintf("%d", elves[0].TotalCalories+elves[1].TotalCalories+elves[2].TotalCalories)
 }
