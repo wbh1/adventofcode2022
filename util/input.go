@@ -6,10 +6,10 @@ import (
 	"os"
 )
 
-func ParseDayInput(day uint8) ([]string, error) {
+func ParseDayInput(day string) ([]string, error) {
 	var input = []string{}
 
-	file, err := os.Open(fmt.Sprintf("./inputs/day%d.txt", day))
+	file, err := os.Open(fmt.Sprintf("./inputs/day%s.txt", day))
 	if err != nil {
 		return nil, err
 	}

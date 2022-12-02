@@ -3,11 +3,11 @@ package solutions
 import (
 	"fmt"
 	"strconv"
-
-	"github.com/wbh1/adventofcode2022/util"
 )
 
-type DayOne struct{}
+type DayOne struct {
+	input []string
+}
 
 var (
 	elves []Elf
@@ -18,15 +18,15 @@ type Elf struct {
 	TotalCalories int
 }
 
-func (d *DayOne) PartOne() string {
-	_input, err := util.ParseDayInput(1)
-	if err != nil {
-		panic(err)
-	}
+func (d *DayOne) SetInput(input []string) {
+	d.input = input
 
+}
+
+func (d *DayOne) PartOne() string {
 	elf := Elf{}
 
-	for _, line := range _input {
+	for _, line := range d.input {
 		// Newline
 		if line == "" {
 			elves = append(elves, elf)
