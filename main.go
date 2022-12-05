@@ -18,6 +18,7 @@ type Solution interface {
 var solved = map[string]Solution{
 	"1": &solutions.DayOne{},
 	"2": &solutions.DayTwo{},
+	"3": &solutions.DayThree{},
 }
 
 func main() {
