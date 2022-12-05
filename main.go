@@ -13,6 +13,7 @@ var solved = map[string]util.Solution{
 	"1": &solutions.DayOne{},
 	"2": &solutions.DayTwo{},
 	"3": &solutions.DayThree{},
+	"4": &solutions.DayFour{},
 }
 
 func main() {
