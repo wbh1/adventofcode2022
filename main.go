@@ -9,13 +9,7 @@ import (
 	"github.com/wbh1/adventofcode2022/util"
 )
 
-type Solution interface {
-	PartOne() string
-	PartTwo() string
-	SetInput([]string)
-}
-
-var solved = map[string]Solution{
+var solved = map[string]util.Solution{
 	"1": &solutions.DayOne{},
 	"2": &solutions.DayTwo{},
 	"3": &solutions.DayThree{},

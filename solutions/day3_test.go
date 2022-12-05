@@ -8,7 +8,7 @@ import (
 )
 
 var (
-	testInputDay3 = strings.Split(`vJrwpWtwJgWrhcsFMMfFFhFp
+	dayThreeTestInput = strings.Split(`vJrwpWtwJgWrhcsFMMfFFhFp
 jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL
 PmmdzqPrVvPwwTWBwg
 wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn
@@ -19,8 +19,7 @@ CrZsJsPPZsGzwwsLwLmpwMDw`, "\n")
 )
 
 func TestDayThreePartOne(t *testing.T) {
-	day3.SetInput(testInputDay3)
-
+	setup(t, dayThreeTestInput, &day3)
 	p1 := day3.PartOne()
 	if p1 != "157" {
 		t.Fatalf("Unexpected return. Want %s, Got %s", "157", p1)
@@ -28,7 +27,7 @@ func TestDayThreePartOne(t *testing.T) {
 }
 
 func TestDayThreePartTwo(t *testing.T) {
-	day3.SetInput(testInputDay3)
+	setup(t, dayThreeTestInput, &day3)
 
 	day3.PartOne()
 	p2 := day3.PartTwo()
