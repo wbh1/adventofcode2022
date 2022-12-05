@@ -28,5 +28,39 @@
             "}",
             ""
         ]
+    },
+
+        "New Solution Test": {
+        "scope": "go",
+        "prefix": "bst",
+        "body": [
+            "package solutions_test",
+            "",
+            "import (",
+            "\t\"strings\"",
+            "\t\"testing\"",
+            "",
+            "\t\"github.com/wbh1/adventofcode2022/solutions\"",
+            ")",
+            "",
+            "var (",
+            "\tDay${1:Zero} = DayTest{Input:`${2:INPUT_PLACEHOLDER}`, \"\\n\"),",
+            "\t\tAlwaysRunPartOne: true,",
+            "\t\tDay:\t\t\t  &solutions.Day${1:Zero}{},",
+            "\t\tPart1Result:\t  \"${3:PartOneResult}\",",
+            "\t\tPart2Result:\t  \"4\",",
+            "\t}",
+            ")",
+            "",
+            "func TestDay${1:Zero}PartOne(t *testing.T) {",
+            "\tDay${1:Zero}.TestDayPartOne(t)",
+            "}",
+            "",
+            "func TestDay${1:Zero}PartTwo(t *testing.T) {",
+            "\tDay${1:Zero}.TestDayPartTwo(t)",
+            "}",
+            ""
+        ],
+        "description": "Base test for AoC solution"
     }
 }
