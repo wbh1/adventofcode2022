@@ -8,30 +8,24 @@ import (
 )
 
 var (
-	dayThreeTestInput = strings.Split(`vJrwpWtwJgWrhcsFMMfFFhFp
+	DayThree = DayTest{
+		Input: strings.Split(`vJrwpWtwJgWrhcsFMMfFFhFp
 jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL
 PmmdzqPrVvPwwTWBwg
 wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn
 ttgJtRGJQctTZtZT
-CrZsJsPPZsGzwwsLwLmpwMDw`, "\n")
-
-	day3 = solutions.DayThree{}
+CrZsJsPPZsGzwwsLwLmpwMDw`, "\n"),
+		AlwaysRunPartOne: true,
+		Day:              &solutions.DayThree{},
+		Part1Result:      "157",
+		Part2Result:      "70",
+	}
 )
 
 func TestDayThreePartOne(t *testing.T) {
-	setup(t, dayThreeTestInput, &day3)
-	p1 := day3.PartOne()
-	if p1 != "157" {
-		t.Fatalf("Unexpected return. Want %s, Got %s", "157", p1)
-	}
+	DayThree.TestDayPartOne(t)
 }
 
 func TestDayThreePartTwo(t *testing.T) {
-	setup(t, dayThreeTestInput, &day3)
-
-	day3.PartOne()
-	p2 := day3.PartTwo()
-	if p2 != "70" {
-		t.Fatalf("Unexpected return. Want %s, Got %s", "70", p2)
-	}
+	DayThree.TestDayPartTwo(t)
 }
