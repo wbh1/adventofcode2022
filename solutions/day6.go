@@ -1,6 +1,9 @@
 package solutions
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 type DaySix struct {
 	input []string
@@ -11,15 +14,9 @@ func (d *DaySix) SetInput(input []string) {
 }
 
 func AllUnique(s string) bool {
-	for i, ltr := range s {
-		for n, otherLtr := range s {
-			// Of course we match ourselves, silly
-			if i == n {
-				continue
-			}
-			if ltr == otherLtr {
-				return false
-			}
+	for _, ltr := range s {
+		if strings.Count(s, string(ltr)) > 1 {
+			return false
 		}
 	}
 	return true
