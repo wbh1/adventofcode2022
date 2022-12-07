@@ -44,7 +44,7 @@
             ")",
             "",
             "var (",
-            "\tDay${1:Zero} = DayTest{Input:`${2:INPUT_PLACEHOLDER}`, \"\\n\"),",
+            "\tDay${1:Zero} = DayTest{Input:strings.Split(`${2:INPUT_PLACEHOLDER}`, \"\\n\"),",
             "\t\tAlwaysRunPartOne: true,",
             "\t\tDay:\t\t\t  &solutions.Day${1:Zero}{},",
             "\t\tPart1Result:\t  \"${3:PartOneResult}\",",
