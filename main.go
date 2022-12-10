@@ -10,15 +10,16 @@ import (
 )
 
 var solved = map[string]util.Solution{
-	"1": &solutions.DayOne{},
-	"2": &solutions.DayTwo{},
-	"3": &solutions.DayThree{},
-	"4": &solutions.DayFour{},
-	"5": &solutions.DayFive{},
-	"6": &solutions.DaySix{},
-	"7": &solutions.DaySeven{},
-	"8": &solutions.DayEight{},
-	"9": &solutions.DayNine{},
+	"1":  &solutions.DayOne{},
+	"2":  &solutions.DayTwo{},
+	"3":  &solutions.DayThree{},
+	"4":  &solutions.DayFour{},
+	"5":  &solutions.DayFive{},
+	"6":  &solutions.DaySix{},
+	"7":  &solutions.DaySeven{},
+	"8":  &solutions.DayEight{},
+	"9":  &solutions.DayNine{},
+	"10": &solutions.DayTen{},
 }
 
 func main() {
